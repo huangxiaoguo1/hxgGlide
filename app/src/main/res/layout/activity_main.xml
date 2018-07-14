@@ -9,7 +9,7 @@
             type="String" />
         <variable
             name="fileName"
-            type="String" />
+            type="Integer" />
     </data>
 
     <LinearLayout
@@ -29,6 +29,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="35dp"
             android:scaleType="fitXY"
-            bind:loadCircleImage="@{fileName}"/>
+            bind:loadCircleImageInteger="@{fileName}"/>
     </LinearLayout>
 </layout>

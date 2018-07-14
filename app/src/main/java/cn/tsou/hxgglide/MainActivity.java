@@ -16,6 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setContext("http://pic24.nipic.com/20120928/6062547_081656427000_2.jpg");
-        binding.setFileName("http://pic24.nipic.com/20120928/6062547_081656427000_2.jpg");
+        binding.setFileName(R.mipmap.ic_launcher);
     }
 }
