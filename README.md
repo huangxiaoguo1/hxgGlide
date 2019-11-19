@@ -121,4 +121,8 @@ dependencies {
 #### 圆角图片
 
 ###### xxx代表的类型：String
-app:loadCircleAngleImage="@{xxx}"
+
+```
+bind:loadCircleAngleImage="@{xxx}"
+```
+
