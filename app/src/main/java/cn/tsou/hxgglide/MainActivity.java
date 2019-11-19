@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import cn.tsou.hxgglide.databinding.ActivityMainBinding;
+import cn.tsou.lib_glide.ImageUtil;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setContext("http://pic24.nipic.com/20120928/6062547_081656427000_2.jpg");
+        binding.setContext("https://unsplash.it/200/200?random&10");
         binding.setFileName(R.mipmap.ic_launcher);
     }
 }

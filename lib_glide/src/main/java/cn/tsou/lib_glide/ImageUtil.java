@@ -5,6 +5,11 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.widget.ImageView;
+
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
+
 import java.io.File;
 import java.net.URL;
 
@@ -51,6 +56,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadImageDrawable"})
     public static void loadImage(ImageView view, Drawable drawable) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -59,6 +65,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadImageInteger"})
     public static void loadImage(ImageView view, Integer resId) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -67,6 +74,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadImageURL"})
     public static void loadImage(ImageView view, URL url) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -75,6 +83,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadImageByte"})
     public static void loadImage(ImageView view, byte[] bytes) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -83,6 +92,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadImageObject"})
     public static void loadImage(ImageView view, Object o) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -91,6 +101,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     //********************************************************************************
     @BindingAdapter({"loadCircleImage"})
     public static void loadCircleImage(ImageView view, String url) {
@@ -118,6 +129,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadCircleImageBitmap"})
     public static void loadCircleImage(ImageView view, Bitmap bitmap) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -126,6 +138,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadCircleImageDrawable"})
     public static void loadCircleImage(ImageView view, Drawable drawable) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -134,6 +147,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadCircleImageInteger"})
     public static void loadCircleImage(ImageView view, Integer resId) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -142,6 +156,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadCircleImageURL"})
     public static void loadCircleImage(ImageView view, URL url) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -150,6 +165,7 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadCircleImageByte"})
     public static void loadCircleImage(ImageView view, byte[] bytes) {
         GlideApp.with(view.getContext().getApplicationContext())
@@ -158,11 +174,26 @@ public class ImageUtil {
                 .thumbnail(0.2f)
                 .into(view);
     }
+
     @BindingAdapter({"loadCircleImageObject"})
     public static void loadCircleImage(ImageView view, Object o) {
         GlideApp.with(view.getContext().getApplicationContext())
                 .load(o)
                 .myGlideCircleConfiguration()
+                .thumbnail(0.2f)
+                .into(view);
+    }
+
+    @BindingAdapter({"loadCircleAngleImage"})
+    public static void loadCircleAngleImage(ImageView view, Object o) {
+        RoundedCorners roundedCorners = new RoundedCorners(10);
+        RequestOptions options = RequestOptions.bitmapTransform(roundedCorners);
+        options.placeholder(R.drawable.app_loading_pic)
+                .error(R.drawable.app_loading_pic)
+                .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC);
+        GlideApp.with(view.getContext().getApplicationContext())
+                .load(o)
+                .apply(options)
                 .thumbnail(0.2f)
                 .into(view);
     }

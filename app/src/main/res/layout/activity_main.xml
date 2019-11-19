@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="context"
             type="String" />
+
         <variable
             name="fileName"
             type="Integer" />
@@ -17,18 +19,28 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity">
+
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:scaleType="fitXY"
-            bind:loadImage="@{context}"/>
+            bind:loadImage="@{context}" />
+
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="35dp"
             android:scaleType="fitXY"
-            bind:loadCircleImageInteger="@{fileName}"/>
+            bind:loadCircleImageInteger="@{fileName}" />
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            bind:loadCircleAngleImage="@{context}"/>
     </LinearLayout>
 </layout>
