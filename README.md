@@ -11,7 +11,7 @@ allprojects {
 	}
 	
 dependencies {
-	        implementation 'com.github.huangxiaoguo1:hxgGlide:1.0.2'
+	        implementation 'com.github.huangxiaoguo1:hxgGlide:1.0.3'
 	}
 ```
 
@@ -115,5 +115,14 @@ dependencies {
 
 ```
    bind:loadCircleImageObject="@{xxxx}"
+```
+
+
+#### 圆角图片
+
+###### xxx代表的类型：String
+
+```
+bind:loadCircleAngleImage="@{xxx}"
 ```
 
