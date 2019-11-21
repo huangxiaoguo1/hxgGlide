@@ -8,6 +8,9 @@
         <variable
             name="context"
             type="String" />
+        <variable
+            name="context1"
+            type="String" />
 
         <variable
             name="fileName"
@@ -21,11 +24,10 @@
         tools:context=".MainActivity">
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
             android:layout_gravity="center_horizontal"
-            android:scaleType="fitXY"
-            bind:loadImage="@{context}" />
+            bind:loadCircleAngleImage="@{context1}" />
 
         <ImageView
             android:layout_width="150dp"

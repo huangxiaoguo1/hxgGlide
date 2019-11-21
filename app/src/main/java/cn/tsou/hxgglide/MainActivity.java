@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setContext1("https://unsplash.it/1080/200?random&10");
         binding.setContext("https://unsplash.it/200/200?random&10");
         binding.setFileName(R.mipmap.ic_launcher);
     }

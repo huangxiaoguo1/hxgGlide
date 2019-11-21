@@ -17,6 +17,7 @@ public class MyGlideExtension {
     public static void myGlideConfiguration(RequestOptions options) {
         options.placeholder(R.drawable.app_loading_pic)
                 .error(R.drawable.app_loading_pic)
+                .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC);
     }
 
@@ -26,6 +27,7 @@ public class MyGlideExtension {
         options.placeholder(R.drawable.app_loading_pic_round)
                 .error(R.drawable.app_loading_pic_round)
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+                .centerCrop()
                 .circleCrop();
     }
 }

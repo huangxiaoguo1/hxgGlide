@@ -190,6 +190,7 @@ public class ImageUtil {
         RequestOptions options = RequestOptions.bitmapTransform(roundedCorners);
         options.placeholder(R.drawable.app_loading_pic)
                 .error(R.drawable.app_loading_pic)
+                .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC);
         GlideApp.with(view.getContext().getApplicationContext())
                 .load(o)
